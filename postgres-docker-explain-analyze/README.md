@@ -164,3 +164,11 @@ As an application developer, you will probably not be able to master this comple
 Learn enough C to be able to read it, enough gdb to set some breakpoints, and enough perf tools to trace syscalls and function calls.
 
 And soon enough, even the most daunting PostgreSQL performance mysteries will reveal themselves.
+
+---
+
+19) If you made it so far and love working with #postgresql and/or #golang, my team at Apple is hiring in #shanghai.
+
+We support relocation, and my DMs are open for any questions!
+
+https://jobs.apple.com/en-us/details/200122427/backend-software-developer-manufacturing-design-systems
