@@ -1,0 +1,17 @@
+vagrant@ubuntu-bionic:~$ pg_test_timing
+Testing timing overhead for 3 seconds.
+Per loop time including overhead: 33.15 ns
+Histogram of timing durations:
+  < us   % of total      count
+     1     96.93465   87727194
+     2      3.05430    2764188
+     4      0.00022        203
+     8      0.00000          4
+    16      0.00461       4172
+    32      0.00461       4173
+    64      0.00102        920
+   128      0.00048        438
+   256      0.00008         74
+   512      0.00001          8
+  1024      0.00000          0
+  2048      0.00000          1

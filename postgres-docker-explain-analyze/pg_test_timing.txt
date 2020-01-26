@@ -1,0 +1,19 @@
+$ docker run -it --rm postgres pg_test_timing
+Testing timing overhead for 3 seconds.
+Per loop time including overhead: 6853.93 ns
+Histogram of timing durations:
+  < us   % of total      count
+     1      0.00023          1
+     2      0.00000          0
+     4      0.00000          0
+     8     97.63221     427343
+    16      0.80259       3513
+    32      0.68882       3015
+    64      0.45533       1993
+   128      0.38336       1678
+   256      0.03541        155
+   512      0.00091          4
+  1024      0.00046          2
+  2048      0.00046          2
+  4096      0.00000          0
+  8192      0.00023          1

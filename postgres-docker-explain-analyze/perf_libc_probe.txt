@@ -1,0 +1,16 @@
+vagrant@ubuntu-bionic:~$ perf probe -x /lib/x86_64-linux-gnu/libc.so.6 'clock_gettime'
+Failed to get entry address of __clock_gettime.
+Added new event:
+  probe_libc:clock_gettime (on clock_gettime in /lib/x86_64-linux-gnu/libc-2.27.so)
+
+You can now use it in all perf tools, such as:
+
+        perf record -e probe_libc:clock_gettime -aR sleep 1
+
+vagrant@ubuntu-bionic:~$ sudo perf stat -e 'probe_libc:clock_gettime' -p 32051
+^C
+ Performance counter stats for process id '32051':
+
+             20016      probe_libc:clock_gettime
+
+       4.372370061 seconds time elapsed

@@ -1,0 +1,10 @@
+postgres=# EXPLAIN ANALYZE SELECT count(*) FROM generate_series(1, 10000);
+                                                         QUERY PLAN
+-----------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=12.50..12.51 rows=1 width=8) (actual time=76.605..76.611 rows=1 loops=1)
+   ->  Function Scan on generate_series  (cost=0.00..10.00 rows=1000 width=0) (actual time=1.808..38.529 rows=10000 loops=1)
+ Planning Time: 0.050 ms
+ Execution Time: 76.821 ms
+(4 rows)
+
+Time: 77.362 ms

@@ -1,0 +1,32 @@
+vagrant@ubuntu-bionic:~$ gdb postgres
+(gdb) disas InstrStartNode
+Dump of assembler code for function InstrStartNode:
+   0x000000000030bb7c <+0>:     push   %rbp
+   0x000000000030bb7d <+1>:     mov    %rsp,%rbp
+   0x000000000030bb80 <+4>:     sub    $0x10,%rsp
+   0x000000000030bb84 <+8>:     mov    %rdi,-0x8(%rbp)
+   0x000000000030bb88 <+12>:    mov    -0x8(%rbp),%rax
+   0x000000000030bb8c <+16>:    movzbl (%rax),%eax
+   0x000000000030bb8f <+19>:    test   %al,%al
+   0x000000000030bb91 <+21>:    je     0x30bbf2 <InstrStartNode+118>
+   0x000000000030bb93 <+23>:    mov    -0x8(%rbp),%rax
+   0x000000000030bb97 <+27>:    mov    0x10(%rax),%rax
+   0x000000000030bb9b <+31>:    test   %rax,%rax
+   0x000000000030bb9e <+34>:    jne    0x30bbc4 <InstrStartNode+72>
+   0x000000000030bba0 <+36>:    mov    -0x8(%rbp),%rax
+   0x000000000030bba4 <+40>:    mov    0x8(%rax),%rax
+   0x000000000030bba8 <+44>:    test   %rax,%rax
+   0x000000000030bbab <+47>:    jne    0x30bbc4 <InstrStartNode+72>
+   0x000000000030bbad <+49>:    mov    -0x8(%rbp),%rax
+   0x000000000030bbb1 <+53>:    add    $0x8,%rax
+   0x000000000030bbb5 <+57>:    mov    %rax,%rsi
+   0x000000000030bbb8 <+60>:    mov    $0x1,%edi
+   0x000000000030bbbd <+65>:    callq  0xafc10 <clock_gettime@plt>
+   0x000000000030bbc2 <+70>:    jmp    0x30bbf2 <InstrStartNode+118>
+   0x000000000030bbc4 <+72>:    lea    0x4ae035(%rip),%rdx        # 0x7b9c00 <__func__.5794>
+   0x000000000030bbcb <+79>:    mov    $0x46,%esi
+   0x000000000030bbd0 <+84>:    lea    0x4adfa1(%rip),%rdi        # 0x7b9b78
+   0x000000000030bbd7 <+91>:    callq  0x64d8d4 <elog_start>
+   0x000000000030bbdc <+96>:    lea    0x4adfa5(%rip),%rsi        # 0x7b9b88
+   0x000000000030bbe3 <+103>:   mov    $0x14,%edi
+   0x000000000030bbe8 <+108>:   mov    $0x0,%eax

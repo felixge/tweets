@@ -1,0 +1,4 @@
+$ man 2 clock_gettime
+
+C library/kernel differences
+   On some architectures, an implementation of clock_gettime() is provided in the vdso(7).

@@ -1,0 +1,7 @@
+$ man 7 vdso
+
+One  frequently  used system call is gettimeofday(2).  This system call is called both directly by user-space applications as well
+as indirectly by the C library.  Think timestamps or timing loops or polling—all of these frequently need to know what time it  is
+right now.  This information is also not secret—any application in any privilege mode (root or any unprivileged user) will get the
+same answer.  Thus the kernel arranges for the information required to answer this question to be placed in memory the process can
+access.  Now a call to gettimeofday(2) changes from a system call to a normal function call and a few memory accesses.

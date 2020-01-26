@@ -1,0 +1,20 @@
+# get the pid of our process to monitor it with perf
+postgres=# SELECT pg_backend_pid();
+ pg_backend_pid
+----------------
+          32051
+(1 row)
+
+Time: 0.386 ms
+
+# before running this, we start perf as seen in the other screenshot
+postgres=# EXPLAIN ANALYZE SELECT count(*) FROM generate_series(1, 10000);
+                                                         QUERY PLAN
+----------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=12.50..12.51 rows=1 width=8) (actual time=4.850..4.850 rows=1 loops=1)
+   ->  Function Scan on generate_series  (cost=0.00..10.00 rows=1000 width=0) (actual time=2.762..3.722 rows=10000 loops=1)
+ Planning Time: 0.045 ms
+ Execution Time: 5.077 ms
+(4 rows)
+
+Time: 5.772 ms

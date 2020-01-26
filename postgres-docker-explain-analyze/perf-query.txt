@@ -1,0 +1,11 @@
+vagrant@ubuntu-bionic:~$ sudo perf stat -e 'syscalls:sys_enter_clock_*' -p 32051
+^C
+ Performance counter stats for process id '32051':
+
+                 0      syscalls:sys_enter_clock_settime
+                 0      syscalls:sys_enter_clock_gettime
+                 0      syscalls:sys_enter_clock_adjtime
+                 0      syscalls:sys_enter_clock_getres
+                 0      syscalls:sys_enter_clock_nanosleep
+
+       4.054646084 seconds time elapsed

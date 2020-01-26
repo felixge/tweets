@@ -1,0 +1,16 @@
+$ docker run --privileged -it postgres dmesg | egrep '(tsc|hpet)'
+[    0.000000] tsc: Detected 3100.000 MHz processor
+[    0.000310] tsc: Detected 3096.000 MHz TSC
+[    7.364589] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 191126044627 ns
+[    7.374949] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2ca08564bf3, max_idle_ns: 440795312460 ns
+[    8.110698] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    8.111555] hpet0: 8 comparators, 32-bit 10.000000 MHz counter
+[    8.117328] clocksource: Switched to clocksource tsc-early
+[    8.176217] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2ca08564bf3, max_idle_ns: 440795312460 ns
+[    8.177959] clocksource: Switched to clocksource tsc
+[11343.843278] clocksource: timekeeping watchdog on CPU7: Marking clocksource 'tsc' as unstable because the skew is too large:
+[11343.877406] clocksource:                       'hpet' wd_now: 6d07d5f0 wd_last: 6c66df1d mask: ffffffff
+[11343.879166] clocksource:                       'tsc' cs_now: 204872faf1c2 cs_last: 2047c1ecc9ae mask: ffffffffffffffff
+[11343.881407] tsc: Marking TSC unstable due to clocksource watchdog
+[11343.882780] TSC found unstable after boot, most likely due to broken BIOS. Use 'tsc=unstable'.
+[11343.888491] clocksource: Switched to clocksource hpet

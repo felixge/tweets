@@ -1,0 +1,22 @@
+{
+  "latest-preset": {
+    "t": "material",
+    "bg": "rgba(74,144,226,1)",
+    "wt": "none",
+    "wc": true,
+    "fm": "Hack",
+    "fs": "18px",
+    "ln": false,
+    "ds": true,
+    "dsyoff": "20px",
+    "dsblur": "68px",
+    "wa": true,
+    "lh": "133%",
+    "pv": "50px",
+    "ph": "50px",
+    "si": false,
+    "wm": false,
+    "es": "4x",
+    "type": "png"
+  }
+}

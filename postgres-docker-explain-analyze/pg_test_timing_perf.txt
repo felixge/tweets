@@ -1,0 +1,26 @@
+vagrant@ubuntu-bionic:~$ sudo perf stat -e 'syscalls:sys_enter_clock_*' $(which pg_test_timing)
+Testing timing overhead for 3 seconds.
+Per loop time including overhead: 31.66 ns
+Histogram of timing durations:
+  < us   % of total      count
+     1     97.05196   91976385
+     2      2.93646    2782887
+     4      0.00069        658
+     8      0.00001          8
+    16      0.00530       5021
+    32      0.00450       4267
+    64      0.00072        686
+   128      0.00030        284
+   256      0.00005         52
+   512      0.00000          3
+  1024      0.00000          1
+
+ Performance counter stats for '/home/vagrant/postgres/bin/pg_test_timing':
+
+                 0      syscalls:sys_enter_clock_settime
+                 0      syscalls:sys_enter_clock_gettime
+                 0      syscalls:sys_enter_clock_adjtime
+                 0      syscalls:sys_enter_clock_getres
+                 0      syscalls:sys_enter_clock_nanosleep
+
+       3.001249311 seconds time elapsed
