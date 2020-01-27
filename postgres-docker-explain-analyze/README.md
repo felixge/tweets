@@ -1,5 +1,11 @@
 theme: Plain Jane
 
+The content below was created for the twitter thread here:
+
+https://twitter.com/felixge/status/1221512507690496001
+
+---
+
 1) Are you using #postgres via #docker for mac?
 
 Have you ever noticed `EXPLAIN ANALYZE` slowing down your queries by like 60x?
